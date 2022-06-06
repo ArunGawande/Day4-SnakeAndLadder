@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class SnakeAndLadder 
 {
-	 private static final int NO_PLAY = 0;
+	    private static final int NO_PLAY = 0;
 	    private static final int LADDER = 1;
 	    private static final int SNAKE = 2;
 	    private static final int MAX_POSITION = 100;
@@ -31,6 +31,9 @@ public class SnakeAndLadder
 
 	                case LADDER:
 	                    positionA += dice;
+	                    if(positionA >  MAX_POSITION) {
+	                    	positionA = positionA-dice;
+	                    }
 	                    break;
 
 	                case SNAKE:
@@ -42,6 +45,6 @@ public class SnakeAndLadder
 	            System.out.println("end : "+positionA);
 	        }
 
-	    }//System.out.println(startPositionA);
-    
-}
+	    }   
+	  
+ }
